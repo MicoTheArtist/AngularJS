@@ -1,17 +1,11 @@
 <html ng-app="airline">
 <head>
 	<title>Demo</title>
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/controllers/app.js"></script>
-	<script type="text/javascript" src="js/controllers/destinations.js"></script>
-	<script type="text/javascript" src="js/controllers/flights.js"></script>
-	<script type="text/javascript" src="js/controllers/reservations.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
-	<div class="container" ng-controller="AppCtrl">
+	<section class="container" ng-controller="AppCtrl"> <!-- ng-controller="AppCtrl" this is considered the outer controller -->
 		<h1>AngulAir</h1>
 
 		<ul class="nav nav-pills">
@@ -24,9 +18,18 @@
 			<li ng-class="reservationsActive">
 				<a href="#/reservations">Reservations</a>
 			</li>
-		</ul>
-
-		<div ng-view></div>
-	</div>
+		</ul>	<!-- nav nav-pills -->
+		
+		<div ng-view></div>	<!-- Each time a seperate view is selected, the controller for that view is also bound to this scope. -->
+        						<!-- this is considered the inner controller. The inner controller can access variables in the outer controller. -->
+								<!-- the inner scope cannot modify the outer scope. -->
+	</section>
+    
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/controllers/destinations.js"></script>
+	<script type="text/javascript" src="js/controllers/flights.js"></script>
+	<script type="text/javascript" src="js/controllers/reservations.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ function AppCtrl ($scope) {
     $scope.reservationsActive = '';
 
     $scope[type + 'Active'] = 'active';
-  }
+  };
 
   $scope.airports = {
     "PDX": {

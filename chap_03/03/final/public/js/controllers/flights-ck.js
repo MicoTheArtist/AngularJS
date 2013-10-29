@@ -1,0 +1,1 @@
+function FlightsCtrl(e){e.setActive("flights");e.airports={}};

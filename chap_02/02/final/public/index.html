@@ -10,13 +10,18 @@
 	<div class="container" ng-controller="AppCtrl">
 		<h1>AngulAir</h1>
 		<ul>
-			<li ng-repeat="airport in airports">{{airport.code}}
-			 - {{airport.city | uppercase}}</li>
+			<li ng-repeat="airport in airports">{{airport.code}} - {{airport.city | uppercase}}</li>	<!-- the "|" pipe symbol lets AngularAir know that we want to use a filter. The filter we are using here is called uppercase. -->
 		</ul>
 
-		<p>{{'128' | currency}}</p>
-
-		<p>{{airports | json}}</p>
+		<p>{{'128' | currency}}</p> <!-- here we are piping the currencty filter -->
+		
+		<p><pre>{{airports | json}}</pre></p>  <!-- here we are piping the json filter -->
 	</div>
 </body>
 </html>
+
+
+<!-- 
+	these are only a few of the filters available.  In the docs their is a complete list.
+	at this url -- http://docs.angularjs.org/api
+-->

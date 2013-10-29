@@ -1,0 +1,1 @@
+function airlineRouter(e){e.when("/",{templateUrl:"partials/destinations.html"}).when("/flights",{template:"<h3>Flights</h3>"}).when("/reservations",{template:"<h3>Your Reservations</h3>"})}angular.module("airline",[]).config(airlineRouter);

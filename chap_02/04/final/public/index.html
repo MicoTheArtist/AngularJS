@@ -1,24 +1,28 @@
 <html ng-app>
 <head>
 	<title>Demo</title>
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/controllers/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
-	<div class="container" ng-controller="AppCtrl">
+	<section class="container" ng-controller="AppCtrl">
 		<h1>AngulAir</h1>
-		<div class="pull-left span6">
+		<article class="pull-left span6">
 			<ul>
 				<li ng-repeat="airport in airports">
 					<a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a>
 				</li>
 			</ul>
 
-		</div>
-		<div class="span5" ng-include src="sidebarURL"></div>
-		<ng-include class="span5" src="sidebarURL"></ng-include>
-	</div>
+		</article>	<!-- pull-left span6 -->
+        
+        <!-- ng-include allows us to include a file using the src attribute and setting it to the $scope.sidebarURL value -->
+		<article class="span5" ng-include src="sidebarURL" style="background-color:orange;"></article>
+		<!-- we can also use the "ng-include" as a dom tag. And pull in the file setting the "src" attribute to the "sidebarURL" variable set on the "app.js" page -->
+        <ng-include class="span5" src="sidebarURL" style="background-color:yellow;"></ng-include>
+	</section>
+    
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
 </body>
 </html>

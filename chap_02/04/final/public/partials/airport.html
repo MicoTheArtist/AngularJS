@@ -1,10 +1,10 @@
-<div ng-show="currentAirport">
-  <h3>{{currentAirport.name}}</h3>
+<div ng-show="currentAirport">		<!-- ng-show hides the markup when currentAirport is not set -->
+  <h3>{{currentAirport.name}}</h3>	
 
   <h4>Destinations</h4>
 
   <ul>
-    <li ng-repeat="destination in currentAirport.destinations">
+    <li ng-repeat="destination in currentAirport.destinations">		<!-- cycling through all of the destinations of the current airport.destinations -->
       {{destination}}
     </li>
   </ul>

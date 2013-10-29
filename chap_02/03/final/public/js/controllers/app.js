@@ -31,6 +31,8 @@ function AppCtrl ($scope) {
 
   $scope.currentAirport = null;
 
+  // This is the function will take one airport code.
+  // Once we have the airport code we can use that to look up information for a specific airport
   $scope.setAirport = function (code) {
     $scope.currentAirport = $scope.airports[code];
   };

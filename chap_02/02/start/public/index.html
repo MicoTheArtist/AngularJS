@@ -1,18 +1,23 @@
 <html ng-app>
 <head>
 	<title>Demo</title>
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/controllers/app.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/controllers/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
-		<h1>AngulAir</h1>
-		<ul>
-			<li ng-repeat="airport in airports">{{airport.code}}
-			 - {{airport.city}}</li>
-		</ul>
-	</div>
+    	<h1>AngulAir</h1>
+        <ul>
+        	<li ng-repeat="airport in airports">{{airport.code}} - {{airport.city | uppercase}}</li>
+        </ul>
+        
+        <p>{{'128' | currency}}</p>
+        
+        <p>
+        	<pre>{{airports | json}}</pre>
+        </p>
+    </div>
 </body>
 </html>

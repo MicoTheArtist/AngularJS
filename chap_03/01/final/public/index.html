@@ -1,9 +1,6 @@
-<html ng-app="airline">
+<html ng-app="airline">	<!-- ng-app="airline" -- this tells angular to use the airline module for this application. -->
 <head>
 	<title>Demo</title>
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/controllers/app.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
@@ -11,7 +8,13 @@
 	<div class="container" ng-controller="AppCtrl">
 		<h1>AngulAir</h1>
 
-		<div ng-view></div>
+		<div ng-view></div>	<!-- "ng-view" allows you to specify a place holder where the view can be displayed -->
 	</div>
+    
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>	 <!-- This app.js file will serve as an overall file that we can use for the application. -->
 </body>
 </html>
+
+<!-- The "Partials" folder contain the views -->
