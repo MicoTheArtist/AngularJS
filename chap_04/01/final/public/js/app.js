@@ -1,4 +1,4 @@
-angular.module('airline', ['airlineServices'])
+angular.module('airline', ['airlineServices'])  // ['airlineServices'] is added.  This makes it possible for Angular to find the "airport" object and supply it in the destination controller.
 	.config(airlineRouter);
 
 function airlineRouter ($routeProvider) {

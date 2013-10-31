@@ -1,0 +1,1 @@
+angular.module("airlineServices",["ngResource"]).factory("Airport",function(e){return e("/airports")});

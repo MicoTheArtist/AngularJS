@@ -1,3 +1,4 @@
+<!-- This is an airport partial -->
 <div ng-show="currentAirport">
   <h3>{{currentAirport.name}}</h3>
 
@@ -5,7 +6,7 @@
 
   <ul>
     <li ng-repeat="destination in currentAirport.destinations">
-      <a ng-href="#/airports/{{destination}}">{{destination}}</a>
+      <a ng-href="#/airports/{{destination}}">{{destination}}</a>	<!-- the "ng-href" directive prevents the browsers default action -->
     </li>
   </ul>
 </div>
