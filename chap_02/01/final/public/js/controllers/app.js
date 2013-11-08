@@ -1,10 +1,10 @@
 // what is different about this function, compared to a regular javascript function is that
 // angular is going to have a look at it first.
 
-function AppCtrl ($scope) { // when angular sees the $scope function it is going to automaticly pull the scope object, and supply it into this function as it is called.
+function AppCtrl ($scope) { // when angular sees the $scope variable in the function signature it is going to automaticly pull the scope object, and supply it into this function as it is called.
 							 // The difference is that angular is going to be calling this function.  We are not going to be calling it directly.
 							 // Once we have the scope, we can than assign variables to the scope.
-  $scope.airports = {
+  $scope.airports = { // In this case we are adding airports as a property of the scope. Airports is an object. 
     "PDX": {
       "code": "PDX",
       "name": "Portland International Airport",

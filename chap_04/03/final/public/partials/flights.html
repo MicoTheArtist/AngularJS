@@ -1,6 +1,8 @@
 <h3>Search for flights</h3>
 
 <div class="controls controls-row">
+  <!-- both of the inputs are being bound to the scope through ng-model -->
+  <!-- we have a search object within the scope and and then "origin" and "destination" properties -->
   <input type="text" class="input-small" placeholder="Origin" ng-model="search.origin" />
   <input type="text" class="input-small" placeholder="Destination" ng-model="search.destination" />
 </div>
@@ -15,7 +17,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="flight in flights | filter:search">
+    <tr ng-repeat="flight in flights | filter:search">	<!-- ng-repeat is cycling over all of the flights in the scope object. We are also padding these flights in throught the filter.  This filter is bound to the "search" object.  This "search" object is the same "search" object is the same search object that we have bound through <input ng-model="search.origin" > and <input ng-model="search.destination" > above --> 
       <td>{{flight.number}}</td>
       <td>
         <a ng-href="#/airports/{{flight.origin}}">

@@ -1,0 +1,1 @@
+var express=require("express"),http=require("http"),airports=require("./data/airports.json"),flights=require("./data/flights.json"),reservations=[];for(var i=0;i<flights.length;i++){flights[i].originFullName=airports[flights[i].origin].name;flights[i].destinationFullName=airports[flights[i].destination].name};

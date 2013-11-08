@@ -1,0 +1,1 @@
+function AirportCtrl(e,t,n){e.currentAirport=n.get({airportCode:t.airportCode})};

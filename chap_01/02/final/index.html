@@ -1,11 +1,14 @@
-<html ng-app>
+<html ng-app> <!-- "ng-app" activates angular -->
 <head>
 	<title>Demo</title>
 </head>
 <body>
-	<h1>Welcome {{name}}!</h1>
+	<h1>Welcome {{name}}!</h1> <!-- double curly braces will act as a placeholder for the name variable -->
+    <!-- "ng-model" is an angular directive.-->
 	<input placeholder="type your name..." ng-model="name" /> <!-- ng-model="name" automaticly reflects the value typed out into the h1 tag -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 	<script type="text/javascript" src="angular-resource.min.js"></script>
 </body>
 </html>
+
+<!-- the angular-resource.min.js file we downloaded from the angular -->

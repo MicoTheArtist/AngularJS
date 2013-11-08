@@ -1,0 +1,1 @@
+function FlightsCtrl(e,t){e.setActive("flights");e.flights=t.query()};

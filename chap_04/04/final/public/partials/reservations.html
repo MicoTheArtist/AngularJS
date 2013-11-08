@@ -1,14 +1,16 @@
+<!-- this is routed from the app.js page -->
 <h3>Reserve your flight</h3>
 
 <div class="controls controls-row">
-  <input type="text" class="input-small" placeholder="Origin" ng-model="reserve.origin" />
-  <input type="text" class="input-small" placeholder="Destination" ng-model="reserve.destination" />
+  <!-- "ng-model" is binding these inputs to the reserve object.  We can send these input values "origin" & "destination" back to the server page "reservations.js" using the reserve object -->
+  <input type="text" class="input-small" placeholder="Origin" ng-model="reserve.origin" /> <!-- one input is bound to the origin property -->
+  <input type="text" class="input-small" placeholder="Destination" ng-model="reserve.destination" />  <!-- the other input is bound to the destination property -->
 </div>
 <a href="" class="btn btn-primary" ng-click="reserveFlight()">Reserve</a>
 
 <h3>Your Reservations</h3>
 
-<table ng-show="reservations.length" class="table">
+<table ng-show="reservations.length" class="table"> <!-- the "ng-show" directive is based on the length property of the reservations array. If the length is 0, this table will not show. -->
   <thead>
     <tr>
       <th>Number</th>
@@ -17,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="flight in reservations">
+    <tr ng-repeat="flight in reservations">	<!-- if their are one or more reservations available, they will be output here. -->
       <td>{{flight.number}}</td>
       <td>
         <a ng-href="#/airports/{{flight.origin}}">
@@ -33,6 +35,6 @@
   </tbody>
 </table>
 
-<div ng-hide="reservations.length" class="alert alert-info">
+<div ng-hide="reservations.length" class="alert alert-info">	<!-- "ng-hide" is the oposite of "ng-show" the "ng-hide" property will only display when the length of reservations is zero.  Otherwise it will be hidden. -->
   You don't currently have any reservations, why not make one now?
 </div>

@@ -10,7 +10,7 @@ function airlineRouter ($routeProvider) {
 		 controller: 'AirportCtrl'
 		})
 		.when('/flights', {
-		 templateUrl: 'partials/flights.html',
+		 templateUrl: 'partials/flights.html',  // this uses the new "flights.html" partial page that was created.
 		 controller: 'FlightsCtrl'})
 		.when('/reservations', {
 		 template: '<h3>Your Reservations</h3> {{airports | json}}',

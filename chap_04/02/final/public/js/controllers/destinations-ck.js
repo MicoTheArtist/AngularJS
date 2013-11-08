@@ -1,0 +1,1 @@
+function DestinationsCtrl(e,t){e.setActive("destinations");e.sidebarURL="partials/airport.html";e.currentAirport=null;e.setAirport=function(n){e.currentAirport=t.get({airportCode:n})};e.airports=t.query()};

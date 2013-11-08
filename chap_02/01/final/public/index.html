@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
-	<div class="container" ng-controller="AppCtrl">	<!-- ng-controller="AppCtrl" : this tells angular to look for App CTRL and to use it as the controller for this element. -->
+	<div class="container" ng-controller="AppCtrl">	<!-- ng-controller="AppCtrl" : this tells angular to look for "AppCTRL" and to use it as the controller for this element. -->
 		<h1>AngulAir</h1>
 
 		<ul ng-repeat="airport in airports">
@@ -14,17 +14,18 @@
 			<li>{{airport.name}}</li>
 		</ul>
         
+		<ul>
+			<li ng-repeat="airport in airports">{{airport.code}}</li>
+		</ul>
+        
+	</div>
+        
         <!-- // when this is moved outside of the div scope it no longer prints the text out
 		<ul>
 			<li ng-repeat="airport in airports">{{airport.code}}</li>
 		</ul>
         -->
 
-	</div>
-
-		<ul>
-			<li ng-repeat="airport in airports">{{airport.code}}</li>
-		</ul>
         
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<script type="text/javascript" src="js/controllers/app.js"></script>

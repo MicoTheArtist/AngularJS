@@ -21,12 +21,13 @@
       <td>{{flight.number}}</td>
       <td>
         <a ng-href="#/airports/{{flight.origin}}">
-          {{flight | originTitle}}
+        	<!-- both of the filters below are custom filters -->
+          {{flight | originTitle}} <!-- their is an "originTitle" filter -->
         </a>
       </td>
       <td>
         <a ng-href="#/airports/{{flight.destination}}">
-          {{flight | destinationTitle}}
+          {{flight | destinationTitle}} <!-- their is an "destinationTitle" filter -->
         </a>
       </td>
     </tr>
