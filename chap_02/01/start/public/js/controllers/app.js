@@ -13,7 +13,7 @@ function AppCtrl ($scope) {
 			"code" : "STL",
 			"name" : "Lambert-St. Louis International Airport",
 			"city" : "St. Louis",
-			"destination" : [
+			"destinations" : [
 				"LAX",
 				"MKE"
 			]
@@ -22,7 +22,7 @@ function AppCtrl ($scope) {
 			"code" : "MCI",
 			"name" : "Kansas City International Airport",
 			"city" : "Kansas City",
-			"destination" : [
+			"destinations" : [
 				"LAX",
 				"DFW"
 			]

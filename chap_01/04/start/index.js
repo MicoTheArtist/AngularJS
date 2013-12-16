@@ -5,6 +5,7 @@ var airports = require('./data/airports.json');
 var flights = require('./data/flights.json');
 var reservations = [];
 
+// methods
 for (var i=0; i<flights.length; i++) {
 	flights[i].originFullName = airports[flights[i].origin].name;
 	flights[i].destinationFullName = airports[flights[i].destination].name;
@@ -12,21 +13,22 @@ for (var i=0; i<flights.length; i++) {
 
 function getMatchingFlights(data) {
 	return flights.filter(function(item) {
-		return (item.origin === data.origin) && (item.destination === data.destination)
+		return (item.origin === data.origin) && 
+				(item.destination === data.destination);
 	});
 }
 
 var app = express()
 	.use(express.bodyParser())
 	.use(express.static('public'));
-
+	
 app.get('/airports', function(req, res) {
 	res.json(airports);
 });
 
 app.get('/airports/:airport', function(req, res) {
 	if (typeof airports[req.params.airport] === 'undefined') {
-		res.json(404, {status: 'not found - invalid airport code.'});
+		res.json(404, {status: 'not found - invalid airport code'});
 	} else {
 		res.json(airports[req.params.airport]);
 	}
@@ -38,20 +40,19 @@ app.get('/flights', function(req, res) {
 
 app.get('/flights/:origin', function(req, res) {
 	var with_origin = flights.filter(function(item) {
-		return item.origin === req.params.origin;
+		return (item.origin === req.params.origin	);
 	});
 	
 	res.json(with_origin);
 });
 
-app.get('/flights/:origin/:destination', function(req, res) {
+app.get('/flights/:origin/:destination', function(req, res){
 	var matches = getMatchingFlights(req.params);
-	
 	res.json(matches);
 });
 
 app.get('/reservations', function(req, res) {
-	res.json(reservations);1
+	res.json(reservations);
 });
 
 app.post('/reservations', function(req, res) {
@@ -68,41 +69,7 @@ app.post('/reservations', function(req, res) {
 app.get('/*', function(req, res) {
 	res.json(404, {status: 'not found'});
 });
-
+	
 http.createServer(app).listen(3000, function() {
 	console.log("Server ready at http://localhost:3000");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-function AppCtrl ($scope) {
+function AppCtrl($scope) {
 	$scope.setActive = function(type) {
 		$scope.destinationsActive = '';
 		$scope.flightsActive = '';

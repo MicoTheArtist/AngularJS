@@ -10,5 +10,5 @@
 	"express" : "*"
   },
   "author": "Manuel Ryan Espinosa",
-  "license": "BSD"
+  "license": "MIT"
 }

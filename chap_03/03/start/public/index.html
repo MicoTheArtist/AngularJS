@@ -1,30 +1,24 @@
-<html ng-app="airline">
+<!doctype html>
+<html lang="en" ng-app="airline">
 <head>
+	<meta charset="UTF-8">
 	<title>Demo</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
 	<section class="container" ng-controller="AppCtrl">
-    	<h1>AngularAir</h1>
-        
+    	<h1>AngulAir</h1>
         <ul class="nav nav-pills">
-        	<li ng-class="destinationsActive">
-            	<a href="#">Destinations</a>
-            </li>
-        	<li ng-class="flightsActive">
-            	<a href="#/flights">Flights</a>
-            </li>
-        	<li ng-class="reservationsActive">
-            	<a href="#/reservations">Reservations</a>
-            </li>
-        </ul>	<!-- nav nav-pills -->
-        
+        	<li ng-class="destinationsActive"><a href="#">Destinations</a></li>
+        	<li ng-class="flightsActive"><a href="#/flights">Flights</a></li>
+        	<li ng-class="reservationsActive"><a href="#/reservations">Reservations</a></li>
+        </ul>
         <div ng-view></div>
     </section>
-    
-    <script src="js/lib/angular.min.js"></script>
-    <script src="js/controllers/app.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="js/controllers/app.js"></script>
     <script src="js/controllers/destinations.js"></script>
     <script src="js/controllers/flights.js"></script>
     <script src="js/controllers/reservations.js"></script>

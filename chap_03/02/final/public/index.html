@@ -1,9 +1,6 @@
 <html ng-app="airline">
 <head>
 	<title>Demo</title>
-	<script type="text/javascript" src="js/lib/angular.min.js"></script>
-	<script type="text/javascript" src="js/controllers/app.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
 </head>
@@ -27,11 +24,14 @@
 
 		<div ng-view></div>
 	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
 
 <!-- 
 	While their are multiple ways of supplying navigation, the best way is to use links and controllers together.
-    links: the links are used to show the possible vieews
+    links: the links are used to show the possible views
     controllers: and the controllers are used to change the navigation state.
 -->

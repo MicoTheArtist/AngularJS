@@ -22,7 +22,7 @@
 		
 		<div ng-view></div>	<!-- Each time a seperate view is selected, the controller for that view is also bound to this scope. -->
         						<!-- this is considered the inner controller. The inner controller can access variables in the outer controller. -->
-								<!-- the inner scope cannot modify the outer scope. -->
+								<!-- the inner scope can access the outerscope, however, the innerscope cannot modify the outer scope. -->
 	</section>
     
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>

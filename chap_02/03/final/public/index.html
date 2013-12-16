@@ -15,7 +15,7 @@
 		</ul>
 		
         <!-- this shows the currentAirport by way of the "$scope.setAirport = function (code)" on the app.js page  -->
-		<p ng-show="currentAirport">Current airport: {{currentAirport.name}}</p>	<!-- ng-show evaluates a variable in our scope and determines if it is null or undefedined or false. -->
+		<p ng-show="currentAirport">Current airport: {{currentAirport.name}} <img src="{{currentAirport.image}}"></p>	<!-- ng-show evaluates a variable in our scope and determines if it is null or undefedined or false. -->
         																				<!-- If ng-show is set to undefined, null or false it does not display anything.  However, if it does have a different value, the value is printed out. -->
 	</div>
     

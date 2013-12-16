@@ -1,26 +1,24 @@
-<html ng-app>
+<!doctype html>
+<html lang="en" ng-app>
 <head>
+	<meta charset="UTF-8">
 	<title>Demo</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
-    	<h1>AngulAir</h1>
-        
-        <ul ng-repeat="airport in airports">
-        	<li>{{airport.code}}</li>
-            <li>{{airport.city}}</li>
-            <li>{{airport.name}}</li>
-        </ul>
-        
-        <ul>
-            <li ng-repeat="airport in airports">{{airport.code}}</li>
-        </ul>
-
-    </div>  
-    
-    <script src="js/lib/angular.min.js"></script>
+		<h1>AngulAir</h1>
+		<ul ng-repeat="airport in airports">
+			<li>{{airport.code}}</li>
+			<li>{{airport.city}}</li>
+			<li>{{airport.name}}</li>
+		</ul>
+		<ul>
+			<li ng-repeat="airport in airports">{{airport.code}}</li>
+		</ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
     <script src="js/controllers/app.js"></script>
 </body>
 </html>

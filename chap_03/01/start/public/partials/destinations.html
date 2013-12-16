@@ -1,10 +1,7 @@
-<div class="pull-left span6">	<!-- This partial contains the code that displays all of the airports. And allows the user to pick an airport as the current one. -->
+<div class="pull-left span6">
 	<h3>All Destinations</h3>
 	<ul>
-		<li ng-repeat="airport in airports">
-			<a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a>
-		</li>
+		<li ng-repeat="airport in airports"><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a></li>
 	</ul>
-
 </div>
 <div class="span5" ng-include src="sidebarURL"></div>

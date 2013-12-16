@@ -6,7 +6,7 @@ function AppCtrl ($scope) {
     $scope.reservationsActive = '';
 
     $scope[type + 'Active'] = 'active';	// here we are setting one of the "<li>" node items to active using the type variable that is passed in and than concanatating "Active" to the end of it to set active.
-  }
+  };
 
   $scope.airports = {
     "PDX": {

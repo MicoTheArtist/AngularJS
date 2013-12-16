@@ -6,5 +6,5 @@ angular.module('airlineServices', ['ngResource'])
 		return $resource('/flights');
 	})
 	.factory('Reservations', function  ($resource) {
-		return $resource('/reservations');
+		return $resource('/reservations'); // This json is found on the index.js page
 	});

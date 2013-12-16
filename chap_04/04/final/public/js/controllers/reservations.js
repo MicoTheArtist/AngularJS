@@ -12,11 +12,14 @@ function ReservationsCtrl ($scope, Reservations) {
 			$scope.reserve.origin = '';
 			$scope.reserve.destination = '';
 
+			console.log(data);
 			// here we push the data into our reservations array
 			$scope.reservations.push(data);
 		});
 	}
 }
 
-// Use resources to save data back to the server.
-// Unlike a traditional html form, resource callbacks make it possible to update the screen without leaving the page.
+// Use "resources" to save data back to the server.
+// Unlike a traditional html form, "resource" callbacks make it possible to update the screen without leaving the page.
+
+console.log(reservations);

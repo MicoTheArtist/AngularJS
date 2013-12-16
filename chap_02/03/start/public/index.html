@@ -1,18 +1,19 @@
+<!doctype html>
 <html ng-app>
 <head>
-	<title>Demo</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
 	<div class="container" ng-controller="AppCtrl">
-    	<h1>AngularAir</h1>
-        <ul>
-        	<li ng-repeat="airport in airports"><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a></li>
-        </ul>
-        
-        <p ng-show="currentAirport">Current airport: {{currentAirport.name}}</p>
+    	<h1>AngulAir</h1>
+    	<ul>
+    		<li ng-repeat="airport in airports"><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a></li>
+    	</ul>
+        <p ng-show="currentAirport">Current airport: {{currentAirport.name}} <img src="{{currentAirport.image}}"></p>
     </div>
-    <script src="js/lib/angular.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
     <script src="js/controllers/app.js"></script>
 </body>
+</html>

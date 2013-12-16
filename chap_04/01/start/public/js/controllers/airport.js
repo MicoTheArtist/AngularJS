@@ -1,3 +1,3 @@
-function AirportCtrl ($scope, $routeParams) {
+function AirportCtrl ($scope) {
 	$scope.currentAirport = $scope.airports[$routeParams.airportCode];
 }

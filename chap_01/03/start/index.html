@@ -1,3 +1,4 @@
+<!doctype html>
 <html ng-app>
 <head>
 	<title>Demo</title>
@@ -6,9 +7,10 @@
 </head>
 <body>
 	<h1>Welcome {{name}}!</h1>
-    <input placeholder="type your name..." ng-model="name">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-    <script src="js/lib/angular-resource.min.js"></script>
+    <h2>We have all come to tell {{name}} to drive a {{car}}</h2>
+    <input type="text" ng-model="name" placeholder="type name ...">
+    <input type="text" ng-model="car" placeholder="type car ....">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular-resource.min.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ angular.module('airline', [])
 function airlineRouter ($routeProvider) {
 	$routeProvider
 		.when('/', {templateUrl: 'partials/destinations.html',
-		 controller: function  ($scope) {	// it is important set in $scope for each of these controllers
+		 controller: function  ($scope) {	// it is important to set in $scope for each of these controllers
 		 	$scope.setActive('destinations');
 		 }})
 		.when('/flights', {template: '<h3>Flights</h3>',

@@ -1,7 +1,7 @@
 angular.module('airline', [])
 	.config(airlineRouter);
 	
-function airlineRouter ($routeProvider) {
+function airlineRouter($routeProvider) {
 	$routeProvider
 		.when('/', {templateUrl: 'partials/destinations.html'})
 		.when('/flights', {template: '<h3>Flights</h3>'})
