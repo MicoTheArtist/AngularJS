@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "A reusable server designed for Up and Running with AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies" : {
+	"express" : "*"
+  },
+  "author": "Manuel Ryan Espinosa",
+  "license": "BSD"
+}
