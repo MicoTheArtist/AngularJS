@@ -1,1 +1,0 @@
-function AppCtrl(e){e.setActive=function(t){e.destinationsActive="";e.flightsActive="";e.reservationsActive="";e[t+"Active"]="active"}};

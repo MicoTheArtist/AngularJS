@@ -1,1 +1,0 @@
-angular.module("airlineServices",["ngResource"]).factory("Airport",function(e){return e("/airports/:airportCode")}).factory("Flights",function(e){return e("/flights")}).factory("Reservations",function(e){return e("/reservations")});
